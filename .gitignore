@@ -1,0 +1,5 @@
+.DS_Store
+gcp_conf.json
+node_modules/
+dist/
+lib/

@@ -1,0 +1,29 @@
+{
+  "plugins": [
+    ["module-alias",[
+      { "src": ".", "expose": "root" },
+      { "src": "./src", "expose": "src" },
+      { "src": "./src/utils", "expose": "utils" },
+      { "src": "./src/routes", "expose": "routes" },
+      { "src": "./src/config", "expose": "settings" },
+      { "src": "./src/modules", "expose": "modules"},
+      { "src": "./src/models", "expose": "models"},
+      { "src": "./src/mongo-models", "expose": "mongo-models"},
+      { "src": "./data", "expose": "data"},
+      { "src": "./air-closet-config", "expose": "acconfig" }
+    ]],
+    ["transform-regenerator", {
+      "asyncGenerators": true,
+      "generators": true,
+      "async": true
+    }],
+    "add-module-exports"
+  ],
+  "presets": [
+    "es2015",
+    "stage-0",
+    "stage-1",
+    "stage-2",
+    "stage-3"
+  ]
+}

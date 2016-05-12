@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vision API Sample</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <h1 class="">Vision API Sample</h1>
+    <form class="vision-form">
+        <input type="text" id="url" placeholder="Input image URL">
+        <button class="" id="js-vision">Vision!</button>
+    </form>
+    <article class="vision-container">
+    </article>
+
+    <script src="/js/bundle.js"></script>
+</body>
+</html>

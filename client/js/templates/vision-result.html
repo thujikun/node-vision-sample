@@ -1,0 +1,55 @@
+<div class="vision-box">
+  <img src="<%= url %>" class="vision-image">
+</div>
+<div class="vision-box vision-description">
+  <% if (result.landmarkAnnotations) { %>
+  <section class="vision-info-block">
+    <h2 class="vision-info-title">Landmarks</h2>
+    <ul class="vision-description-list">
+      <% result.landmarkAnnotations.forEach(landmark => { %>
+        <li><%= landmark.description %></li>
+      <% }) %>
+    </ul>
+  </section>
+  <% } %>
+  <% if (result.labelAnnotations) { %>
+  <section class="vision-info-block">
+    <h2 class="vision-info-title">Labels</h2>
+    <ul class="vision-description-list">
+      <% result.labelAnnotations.forEach(label => { %>
+        <li><%= label.description %></li>
+      <% }) %>
+    </ul>
+  </section>
+  <% } %>
+  <% if (result.logoAnnotations) { %>
+  <section class="vision-info-block">
+    <h2 class="vision-info-title">Logos</h2>
+    <ul class="vision-description-list">
+      <% result.logoAnnotations.forEach(logo => { %>
+        <li><%= logo.description %></li>
+      <% }) %>
+    </ul>
+  </section>
+  <% } %>
+  <% if (result.imagePropertiesAnnotation) { %>
+  <section class="vision-info-block">
+    <h2 class="vision-info-title">colors</h2>
+    <ul class="vision-color-list">
+      <% result.imagePropertiesAnnotation.dominantColors.colors.forEach(colorInfo => { %>
+        <li><div class="vision-color" style="background-color: rgb(<%= colorInfo.color.red %>, <%= colorInfo.color.blue %>, <%= colorInfo.color.green %>);"></div></li>
+      <% }) %>
+    </ul>
+  </section>
+  <% } %>
+  <% if (result.textAnnotations) { %>
+  <section class="vision-info-block">
+    <h2 class="vision-info-title">texts</h2>
+    <ul class="vision-text-list">
+      <% result.textAnnotations.forEach(text => { %>
+        <li><%= text.description %></li>
+      <% }) %>
+    </ul>
+  </section>
+  <% } %>
+</div>
